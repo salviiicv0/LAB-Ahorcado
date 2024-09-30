@@ -22,3 +22,10 @@ def enmascarar_palabra(palabra, letras_probadas):
         else:
             res.append("_")
     return "".join(res)
+
+
+def pedir_letra(letras_probadas):
+    n_letra = input("Introduce una nueva letra: ")
+    while n_letra.lower() in letras_probadas:
+        n_letra = input("Ya has probado con esa letra. Intente con otra: ")
+    return n_letra.lower()
