@@ -15,5 +15,10 @@ def elegir_palabra(palabras):
     return random.choice(palabras)
 
 def enmascarar_palabra(palabra, letras_probadas):
-    lista = []
-    
+    res = []
+    for letras in palabra:
+        if letras in letras_probadas:
+            res.append(letras)
+        else:
+            res.append("_")
+    return "".join(res)
