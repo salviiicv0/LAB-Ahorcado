@@ -12,5 +12,8 @@ def cargar_palabras(ruta):
         return res
     
 def elegir_palabra(palabras):
-    palabra = random.choice(palabras)
-    return palabra
+    return random.choice(palabras)
+
+def enmascarar_palabra(palabra, letras_probadas):
+    lista = []
+    
