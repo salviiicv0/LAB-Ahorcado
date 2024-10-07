@@ -29,7 +29,7 @@ def test_comprobar_letra(palabra, letra):
     print(f"Resultado: {'Acierto' if acierto else 'Fallo'}")
     print()
 
-def test_compobar_palabra_completa(palabra, letras_probadas):
+def test_comprobar_palabra_completa(palabra, letras_probadas):
     print(f"Testeando comprobar_palabra_completa() con la palabra '{palabra}' y las letras ({','.join(letras_probadas)})... ")
     resultado = comprobar_palabra_completa(palabra, letras_probadas)
     print(f"Resultado: {'Completa' if resultado else 'Incompleta'}")
@@ -50,11 +50,11 @@ if __name__ == "__main__":
     #test_enmascarar_palabra('python', {'a', 'b', 'c', 'd', 'e'})
     #test_enmascarar_palabra('python', {'a', 'e', 'i', 'o', 'u'})
     #test_pedir_letra({'a', 'b', 'c'})
-    test_comprobar_letra('python', 'p')
-    test_comprobar_letra('python', 'a')
-    #test_compobar_palabra_completa('python', {'p', 'y', 't', 'h', 'o', 'n'})
-    #test_compobar_palabra_completa('python', {'a', 'b', 'c', 'd', 'e'})
-    #test_compobar_palabra_completa('python', {})
+    #test_comprobar_letra('python', 'p')
+    #test_comprobar_letra('python', 'a')
+    test_comprobar_palabra_completa('python', {'p', 'y', 't', 'h', 'o', 'n'})
+    test_comprobar_palabra_completa('python', {'a', 'b', 'c', 'd', 'e'})
+    test_comprobar_palabra_completa('python', {})
     #test_ejecutar_turno('python', {'a', 'b', 'c', 'd', 'e'})
     #test_ejecutar_turno('python', {'p', 'y', 't', 'h', 'o'})
    

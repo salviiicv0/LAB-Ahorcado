@@ -37,3 +37,10 @@ def comprobar_letra(palabra_secreta, letra):
     else:
         print("La letra no está en la palabra secreta")
         return(False)
+
+def comprobar_palabra_completa(palabra_secreta, letras_probadas):
+    for letra in palabra_secreta:
+        if letra not in letras_probadas:
+            return(False)
+        else:
+            return(True)
