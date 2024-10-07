@@ -29,3 +29,11 @@ def pedir_letra(letras_probadas):
     while n_letra.lower() in letras_probadas:
         n_letra = input("Ya has probado con esa letra. Intente con otra: ")
     return n_letra.lower()
+
+def comprobar_letra(palabra_secreta, letra):
+    if letra in palabra_secreta:
+        print("La letra está en la palabra secreta")
+        return(True)
+    else:
+        print("La letra no está en la palabra secreta")
+        return(False)
