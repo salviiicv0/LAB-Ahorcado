@@ -52,9 +52,9 @@ if __name__ == "__main__":
     #test_pedir_letra({'a', 'b', 'c'})
     #test_comprobar_letra('python', 'p')
     #test_comprobar_letra('python', 'a')
-    test_comprobar_palabra_completa('python', {'p', 'y', 't', 'h', 'o', 'n'})
-    test_comprobar_palabra_completa('python', {'a', 'b', 'c', 'd', 'e'})
-    test_comprobar_palabra_completa('python', {})
-    #test_ejecutar_turno('python', {'a', 'b', 'c', 'd', 'e'})
+    #test_comprobar_palabra_completa('python', {'p', 'y', 't', 'h', 'o', 'n'})
+    #test_comprobar_palabra_completa('python', {'a', 'b', 'c', 'd', 'e'})
+    #test_comprobar_palabra_completa('python', {})
+    test_ejecutar_turno('python', {'a', 'b', 'c', 'd', 'e'})
     #test_ejecutar_turno('python', {'p', 'y', 't', 'h', 'o'})
    

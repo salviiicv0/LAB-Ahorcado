@@ -44,3 +44,11 @@ def comprobar_palabra_completa(palabra_secreta, letras_probadas):
             return(False)
         else:
             return(True)
+        
+def ejecutar_turno(palabra_secreta, letras_probadas):
+    palabra_enmascarada = enmascarar_palabra(palabra_secreta, letras_probadas)
+    print("Este es el estado actual de la palabra secreta: ", palabra_enmascarada)
+    l_probada = pedir_letra(letras_probadas)
+    is_letra = comprobar_letra(palabra_secreta, l_probada)
+    letras_probadas.add(l_probada)
+    return is_letra
