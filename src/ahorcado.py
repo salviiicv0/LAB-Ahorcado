@@ -52,3 +52,30 @@ def ejecutar_turno(palabra_secreta, letras_probadas):
     is_letra = comprobar_letra(palabra_secreta, l_probada)
     letras_probadas.add(l_probada)
     return is_letra
+
+def jugar(max_intentos, palabras):
+    print("Bienvenido al juego del ahorcado.")
+    palabra_secreta = elegir_palabra(palabras)
+    letras_probadas = set(); intentos = 0
+    while intentos < max_intentos:
+        is_acierto = ejecutar_turno(palabra_secreta, letras_probadas)
+        if is_acierto:
+            palabra_completa = comprobar_palabra_completa(palabra_secreta, letras_probadas)
+            if palabra_completa:
+                break
+        else:
+            intentos += 1
+    print("Fin del juego!")
+    if intentos <= max_intentos:
+        print("Enhorabuena, has conseguido descubrir la palabra secreta!")
+        print(f"""
+              Número de intentos: {intentos}
+              Número de intentos máximos: {max_intentos}
+              """)
+        
+#Iniciar el juego
+if __name__ == "__main__":
+    palabras = cargar_palabras("data\palabras_ahorcado.txt")
+    jugar(250, palabras)
+
+
